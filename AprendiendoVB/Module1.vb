@@ -19,7 +19,8 @@
         'UnMetodo()
         'Operadores()
         'EntradaDatos()
-        Condicionales()
+        'Condicionales()
+        Bucles()
 
         'Pongo readline para que no se me cierre la consola, espera a que pulsemos una tecla
         Console.ReadKey(True)
@@ -58,6 +59,52 @@
         Else
             Console.WriteLine("Las dos variables son iguales")
         End If
+
+        'Select case => viene a ser el switch
+        Select Case num2
+            Case 1
+                'instrucciones
+            Case 2
+                'instrucciones
+            Case 3
+                'instrucciones
+            Case Else
+                'Como el Default
+        End Select
+
+    End Sub
+
+    Sub Bucles()
+        'for
+        For index = 1 To 10
+            Console.WriteLine(index)
+        Next
+        Console.WriteLine("==============================")
+        For index = 0 To 10 Step 2
+            'Con Step indicamos el rango de cuanto aumenta, en este caso suma 2 a index
+            'De esta manera, por ejemplo, mostraríamos los números pares
+            Console.WriteLine(index)
+        Next
+
+        Console.WriteLine("==============================")
+
+        'while
+        While num2 < 10
+            'si no se cumple la condición ya ni entra, lo de siempre
+            Console.WriteLine(num2)
+            num2 += 1
+        End While
+
+        'do-Loop
+        Do
+            'ejecuta las instrucciones al menos una vez
+            Console.WriteLine("entro una vez")
+        Loop While (num2 > 10) 'en vez de While podemos usar Until => se va a repetir hasta que la condición sea verdadera
+        'en este caso, si ponemos Loop Until (num2>10) nos meterá un bucle infinito, ya que esa condición no será verdadera
+    End Sub
+
+    Sub Arrays()
+
     End Sub
 
 End Module
