@@ -20,7 +20,9 @@
         'Operadores()
         'EntradaDatos()
         'Condicionales()
-        Bucles()
+        'Bucles()
+        'Arrays()
+        Matrices()
 
         'Pongo readline para que no se me cierre la consola, espera a que pulsemos una tecla
         Console.ReadKey(True)
@@ -104,7 +106,30 @@
     End Sub
 
     Sub Arrays()
+        Dim nombres(6) As String
+        'meter datos 
+        'nombres(0) = "Iris"
 
+        Dim nombresDos = New String() {"Iris", "Carlos", "Marta", "Raúl", "Hugo", "Maria"} 'meter datos en la declaración
+
+        'mostrar datos
+        For Each nombre As String In nombresDos
+            Console.WriteLine(nombre)
+        Next
+    End Sub
+
+    Sub Matrices()
+        'a diferencia de los arrays tienen más de una dimensión
+        Dim numeros(2, 3) As Integer
+        'numeros(1,1) = 3 meter datos 
+
+        'meter datos en la declaración
+        Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
+
+        'mostrar, con un for doble anidados o con un foreach
+        For Each numero As Integer In matrix
+            Console.WriteLine(numero)
+        Next
     End Sub
 
 End Module
