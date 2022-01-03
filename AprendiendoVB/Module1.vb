@@ -22,7 +22,11 @@
         'Condicionales()
         'Bucles()
         'Arrays()
-        Matrices()
+        'Matrices()
+        'MetodosConParam(22)
+        Console.WriteLine("El resultado es: " & RetornarValores(3, 3))
+
+
 
         'Pongo readline para que no se me cierre la consola, espera a que pulsemos una tecla
         Console.ReadKey(True)
@@ -116,6 +120,14 @@
         For Each nombre As String In nombresDos
             Console.WriteLine(nombre)
         Next
+
+
+
+        'Redim => Nos permite redimensionar el array
+        'Preserve => Nos permite preservar los datos que tenia el array antes de la reasignación de tamaño
+        ReDim Preserve nombres(9)
+
+
     End Sub
 
     Sub Matrices()
@@ -131,5 +143,24 @@
             Console.WriteLine(numero)
         Next
     End Sub
+
+    Sub MetodosConParam(num As Integer)
+        Dim numPorRef As Integer = num
+
+        ParametrosPorRef(numPorRef)
+
+        Console.WriteLine("El número es: " & num & "Y el num por ref: " & numPorRef)
+    End Sub
+
+    'Parámetros por referencia
+    Sub ParametrosPorRef(ByRef num As Integer)
+        num = 44 'eso cambia el valor que le mandamos
+    End Sub
+
+    'funciones que retornan valor
+    Function RetornarValores(num1 As Integer, num2 As Integer) As Integer
+        Dim resultado As Integer = num1 + num2
+        Return resultado
+    End Function
 
 End Module
