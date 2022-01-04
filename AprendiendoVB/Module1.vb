@@ -24,7 +24,14 @@
         'Arrays()
         'Matrices()
         'MetodosConParam(22)
-        Console.WriteLine("El resultado es: " & RetornarValores(3, 3))
+        'Console.WriteLine("El resultado es: " & RetornarValores(3, 3))
+        'CositasDeStrings()
+
+        'POO
+        Dim poo As POO = New POO("Focus", "Ford")
+        poo.cambiarColor("verde slytherin")
+        Console.WriteLine(poo.TeLoPaso)
+
 
 
 
@@ -163,4 +170,17 @@
         Return resultado
     End Function
 
+    'Algunas funciones predeterminadas para los strings
+    Sub CositasDeStrings()
+        Dim cadena1 As String = "Toqueteando todos sus secretos"
+        Dim cadena2 As String = "Toqueteando todos sus secretos"
+
+        Console.WriteLine(cadena1)
+        Console.WriteLine("Mayúsculas: " & cadena2.ToUpper)
+        Console.WriteLine("Minúsculas: " & cadena2.ToLower)
+        Console.WriteLine("Recortando: " & cadena2.Substring(0, 12))
+        Console.WriteLine("Tamaño: " & cadena2.Length)
+        Console.WriteLine("Comparando: " & cadena1.Equals(cadena2))
+
+    End Sub
 End Module
