@@ -30,7 +30,9 @@
         'POO
         Dim poo As POO = New POO("Focus", "Ford")
         poo.cambiarColor("verde slytherin")
+        poo.setReferencia("referencia 1133")
         Console.WriteLine(poo.TeLoPaso)
+        Console.WriteLine(poo.getReferencia)
 
 
 

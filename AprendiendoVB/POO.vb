@@ -5,6 +5,15 @@
     Public modelo As String
     Public color As String
 
+    'Encapsulación set y get
+    Private referencia As String
+    Public Sub setReferencia(referencia As String)
+        Me.referencia = referencia
+    End Sub
+    Public Function getReferencia() As String
+        Return Me.referencia
+    End Function
+
     'constructor
     Public Sub New(modelo As String, marca As String)
         Me.modelo = modelo
