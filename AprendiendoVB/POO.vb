@@ -20,6 +20,11 @@
         Me.marca = marca
     End Sub
 
+    'Sobrecarga del constructo
+    Public Sub New()
+        Console.WriteLine("Constructor vacio")
+    End Sub
+
     'funciones
     Public Sub cambiarColor(color As String)
         Me.color = color 'Me es el this
@@ -27,6 +32,11 @@
 
     Public Function TeLoPaso() As String
         Return "El color del " & Me.marca & " " & Me.modelo & " es: " & color
+    End Function
+
+    'sobrecargas
+    Public Function TeLoPaso(nombre As String) As String
+        Return "Hola " & nombre & " el color del " & Me.marca & " " & Me.modelo & " es: " & color
     End Function
 
 End Class

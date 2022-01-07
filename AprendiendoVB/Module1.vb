@@ -32,6 +32,7 @@
         poo.cambiarColor("verde slytherin")
         poo.setReferencia("referencia 1133")
         Console.WriteLine(poo.TeLoPaso)
+        Console.WriteLine(poo.TeLoPaso("Iris"))
         Console.WriteLine(poo.getReferencia)
 
 
